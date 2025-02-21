@@ -5,7 +5,7 @@ strikeseparation.ipynb works really well, and the results can be seen in before.
 The audio used in testing is from Elden Ring gameplay (not my gameplay footage!): 
 https://www.youtube.com/watch?v=BPkNLt_iir8 
 
-For live audio separation:
+###For live audio separation:
 What I've got so far can be seen in Audio Seperation.ipynb
 It uses this to listen to windows audio: https://vb-audio.com/Cable/
 Then processes that and sends it to the output device (cloud 2 headphones in demonstration.)
@@ -13,11 +13,11 @@ Delay so far is actually decent, but GPU usage is too high to be feasible for mo
 
 You can find your device and the settings to use with this small chunk of code:
 
-import sounddevice as sd
+`import sounddevice as sd
 
 devices = sd.query_devices()
 for i, device in enumerate(devices):
     print(f"Device {i}:")
     print(f"   Name: {device['name']}")
     print(f"   Channels: {device['max_input_channels']} in, {device['max_output_channels']} out")
-    print(f"   Sample Rate: {device['default_samplerate']} Hz\n")
+    print(f"   Sample Rate: {device['default_samplerate']} Hz\n")`
